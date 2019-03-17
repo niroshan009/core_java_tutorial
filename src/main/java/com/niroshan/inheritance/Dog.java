@@ -10,10 +10,13 @@ public class Dog  extends  Animal{
     }
 
     public void move(){
-        System.out.println("Dog"+super.animalType+"is runing");
+        System.out.println("Dog: "+super.animalType+" is runing");
     }
 
 
+    public void bark(){
+        System.out.println("Dog is barking");
+    }
 
 
 }
