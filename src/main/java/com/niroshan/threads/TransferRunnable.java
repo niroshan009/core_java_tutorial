@@ -33,7 +33,11 @@ public class TransferRunnable implements Runnable {
                 int toAccount = (int) (bank.size()*Math.random());
                 double amount =maxAmount * Math.random();
 
-                bank.transfar(from,toAccount,amount);
+                // below is the call from regular method which has lock implementation
+                // bank.transfar(from,toAccount,amount);
+
+                //below is the method with the synchronized method
+                bank.transferSynchronized(from,toAccount,amount);
                 Thread.sleep(DELAY);
             }
         }
