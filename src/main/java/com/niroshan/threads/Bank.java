@@ -1,5 +1,6 @@
 package com.niroshan.threads;
 
+import java.util.Vector;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -95,6 +96,22 @@ public class Bank {
             sum += amt;
         }
         return sum;
+    }
+
+    /*
+     *
+     * Synchronized code block
+     *
+     * */
+
+    public synchronized void transferVector(Vector<Double> accounts,int from, int to, double amount) throws InterruptedException {
+
+
+        synchronized (accounts){
+            accounts.set(from,accounts.get(from)-amount);
+            accounts.set(to,accounts.get(to)+amount);
+        }
+
     }
 
 
