@@ -1,4 +1,4 @@
-package com.niroshan.design.patterns.abstractFactory;
+package com.niroshan.design.patterns.structural.abstractFactory;
 
 public class GermanCat extends Cat {
 

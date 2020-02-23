@@ -1,4 +1,4 @@
-package com.niroshan.design.patterns.factory;
+package com.niroshan.design.patterns.structural.factory;
 
 public class GoldenRetreiver implements Dog {
     @Override
